@@ -20,21 +20,27 @@ const v1 = (params, uri, methodName) => {
 
     try {
 
-        const body = Object.entries(params)
-            .reduce((item, [key, value]) => {
-                return item += `<${key}>${value}</${key}>`
-            }, '')
+        let xml = ''
 
-        const xml = xmlGenerator(methodName, body)
+        if (Object.values(params).length > 0) {
+
+            const body = Object.entries(params)
+                .reduce((item, [key, value]) => {
+                    return item += `<${key}>${value}</${key}>`
+                }, '')
+
+            xml = xmlGenerator(methodName, body)
+
+        }
 
             return {
                 method: 'post',
                 url: `${uri}`,
-                data: xml,
-                headers: {
-                    'Content-Type': 'text/xml',
-                    'Content-Length': xml.length
-                }
+                // data: xml,
+                // headers: {
+                //     'Content-Type': 'text/xml; charset=utf-8',
+                //     'Content-Length': xml.length
+                // }
             }
 
     } catch (error) {

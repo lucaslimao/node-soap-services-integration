@@ -24,8 +24,6 @@ const get = async (methodName, uri, params, version) => {
 
         console.log(`status: ${status}`)
 
-        console.log(`retorno: ${data}`)
-
         return {
             status: status,
             body: data
@@ -33,7 +31,7 @@ const get = async (methodName, uri, params, version) => {
 
     } catch(error) {
 
-        console.log(`Error, ${JSON.stringify(error)}`)
+        console.log(`status: 500`)
 
         return {
             status: 500,
