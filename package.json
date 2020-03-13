@@ -1,0 +1,23 @@
+{
+  "name": "node-soap-services-integration",
+  "version": "0.0.1",
+  "description": "Serviço Node, para integração com serviços externos, que utilizam SOAP.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lucaslimao/node-soap-services-integration.git"
+  },
+  "keywords": [
+    "node",
+    "soap"
+  ],
+  "author": "Lucas Limão",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lucaslimao/node-soap-services-integration/issues"
+  },
+  "homepage": "https://github.com/lucaslimao/node-soap-services-integration#readme"
+}
