@@ -4,7 +4,7 @@
   "description": "Serviço Node, para integração com serviços externos, que utilizam SOAP.",
   "main": "index.js",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha --no-timeouts"
   },
   "repository": {
     "type": "git",

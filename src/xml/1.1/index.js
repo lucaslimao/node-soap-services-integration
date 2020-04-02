@@ -22,6 +22,8 @@ const v1 = (params, uri, methodName) => {
 
         let xml = ''
 
+        console.log(`v1, ${params}`)
+
         if (Object.values(params).length > 0) {
 
             const body = Object.entries(params)
@@ -33,15 +35,15 @@ const v1 = (params, uri, methodName) => {
 
         }
 
-            return {
-                method: 'post',
-                url: `${uri}`,
+        return {
+            method: 'post',
+            url: `${uri}`,
                 // data: xml,
                 // headers: {
                 //     'Content-Type': 'text/xml; charset=utf-8',
                 //     'Content-Length': xml.length
                 // }
-            }
+        }
 
     } catch (error) {
         throw error

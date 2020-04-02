@@ -18,6 +18,8 @@ const get = async (methodName, uri, params, version) => {
             throw new Error('Versão inválida do Xml. ')
         }
 
+        console.log(`get, version: ${version}`)
+
         const response = fn(params, uri, methodName)
 
         const { status, data } = await axios(response)
@@ -31,7 +33,7 @@ const get = async (methodName, uri, params, version) => {
 
     } catch(error) {
 
-        console.log(`status: 500`)
+        console.log(`status: error, ${error}`)
 
         return {
             status: 500,

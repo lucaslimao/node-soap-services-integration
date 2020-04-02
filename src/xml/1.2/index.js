@@ -5,6 +5,8 @@ const v2 = (params, uri, methodName) => {
 
         let url = ''
 
+        console.log(`v2, ${params}`)
+
         if (Object.values(params).length > 0) {
 
             url = Object.entries(params)
@@ -13,6 +15,8 @@ const v2 = (params, uri, methodName) => {
                 }, '')
 
         }
+
+        console.log(`retorno, ${uri}/${methodName}?${url}`)
 
         return {
             method: 'get',
